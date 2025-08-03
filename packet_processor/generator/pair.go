@@ -19,3 +19,7 @@ func CreateRandomPairs(nSamples uint32) []Pair {
 	}
 	return pairs
 }
+
+func GeneratePair(start int, end int) Pair {
+	return NewRandomPair(start, end)
+}

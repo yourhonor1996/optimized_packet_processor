@@ -53,7 +53,3 @@ func TestGeneratedStringHasRandomLength(t *testing.T) {
 		}
 	}
 }
-
-func GeneratePair(start int, end int) Pair {
-	return NewRandomPair(start, end)
-}
