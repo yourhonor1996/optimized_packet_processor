@@ -6,7 +6,7 @@
 
 ## 📦 Download & Setup
 
-1. Download `packet_processor.exe` from here:
+1. Download `packet_processor.exe` from here: [Download Executable](https://github.com/yourhonor1996/optimized_packet_processor/blob/main/packet_processor/packet_proecssor.exe)
 2. Place it in a directory of your choice.
 3. Open **Command Prompt** (`cmd`) or **PowerShell**.
 4. Navigate to the directory containing `packet_processor.exe`.
