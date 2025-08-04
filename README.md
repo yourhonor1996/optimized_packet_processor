@@ -28,10 +28,12 @@ All parameters are optional. If you don't provide them, the application will gen
 ## 🧾 Command-Line Options
 
 | Option | Description                                                                                                                                                                                               |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `-i`   | (Optional) Path to input file. If not provided, the app generates one.                                                                                                                                    |
 | `-o`   | (Optional) Path to output file. If not provided, the app generates one.                                                                                                                                   |
 | `-n`   | (Optional) Number of samples to generate or process. Default behavior:<br>• If `-i` is **not** provided → generate **`n`** samples.<br>• If `-i` **is** provided → process **`n`** samples from the file. |
+| `-h`   | Help for commands                                                                                                                                                                                         |
+
 
 ---
 
