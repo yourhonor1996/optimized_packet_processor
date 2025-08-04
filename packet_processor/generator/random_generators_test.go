@@ -33,14 +33,14 @@ func TestGenerateRandomString(t *testing.T) {
 
 func TestGenerateId(t *testing.T) {
 	for i := 0; i < 10; i++ {
-		str := generateId(100000, 1000000)
+		str := GenerateId(100000, 1000000)
 		println(str)
 	}
 }
 
 func TestGeneratePair(t *testing.T) {
 	for i := 0; i < 20; i++ {
-		pair := GenerateRandomPair(100000, 1000000)
+		pair := NewRandomPairBase64(100000, 1000000)
 		fmt.Println(pair)
 	}
 }

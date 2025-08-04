@@ -2,16 +2,11 @@ package generator
 
 import (
 	"fmt"
-	"github.com/yourhonor1996/optimized_packet_processor/packet_proecssor/utils"
 	"os"
 )
 
-func GenerateRandomSampleFileName() string {
-	return randomFilePrefix + "_" + utils.GetNowAsFormattedString() + ".txt"
-}
-
 func WriteRandomPairsToFile(fileName string, nSamples int) {
-	samples := GenerateRandomPairs(nSamples)
+	samples := GenerateRandomPairsBase64(nSamples)
 
 	file, err := os.Create(fileName)
 	if err != nil {

@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/yourhonor1996/optimized_packet_processor/packet_proecssor/shared"
+	"github.com/yourhonor1996/optimized_packet_processor/packet_proecssor/utils"
 	"os"
 	"strconv"
 	"strings"
@@ -21,7 +22,7 @@ func (p *CsvReader) Close() error {
 	return p.file.Close()
 }
 
-func (p *CsvReader) GetNextPair() (shared.Pair, error) {
+func (p *CsvReader) GetNextPairDecoded() (shared.Pair, error) {
 	s, err := p.reader.ReadString('\n')
 	if err != nil {
 		defer p.file.Close()
@@ -40,7 +41,7 @@ func (p *CsvReader) GetNextPair() (shared.Pair, error) {
 
 	p.lineNumber++
 
-	return shared.Pair{Id: idInt, Text: text}, nil
+	return shared.Pair{Id: idInt, Text: utils.DecodeBase64(text)}, nil
 
 }
 

@@ -8,7 +8,7 @@ import (
 
 func TestGetNextLine(t *testing.T) {
 	fp := NewCsvReader(shared.FileName)
-	pair, err := fp.GetNextPair()
+	pair, err := fp.GetNextPairDecoded()
 	if err != nil {
 		t.Errorf("Error reading even the first pair! :%v", err)
 	}
@@ -20,7 +20,7 @@ func TestGetAllLines(t *testing.T) {
 	fp := NewCsvReader(shared.FileName)
 	defer fp.Close()
 	for {
-		pair, err := fp.GetNextPair()
+		pair, err := fp.GetNextPairDecoded()
 		if err != nil {
 			fmt.Println("finished file", err)
 			break
