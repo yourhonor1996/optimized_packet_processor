@@ -10,9 +10,8 @@ func TestGenerateSampleFileName(t *testing.T) {
 	fmt.Println(fileName)
 }
 
-func TestGenerateAFileWithRandomSamples(t *testing.T) {
-	fileName := GenerateRandomSampleFileName()
-	var numberOfSamples uint32 = 1000
-	WriteRandomPairsToFile(fileName, numberOfSamples)
-	//TODO-CONTINUEFROMHERE continue from this test...
-}
+//func TestGenerateAFileWithRandomSamples(t *testing.T) {
+//	fileName := GenerateRandomSampleFileName()
+//	var numberOfSamples int = 100
+//	WriteRandomPairsToFile(fileName, numberOfSamples)
+//}

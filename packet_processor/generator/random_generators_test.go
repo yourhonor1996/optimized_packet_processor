@@ -40,7 +40,7 @@ func TestGenerateId(t *testing.T) {
 
 func TestGeneratePair(t *testing.T) {
 	for i := 0; i < 20; i++ {
-		pair := GeneratePair(100000, 1000000)
+		pair := GenerateRandomPair(100000, 1000000)
 		fmt.Println(pair)
 	}
 }

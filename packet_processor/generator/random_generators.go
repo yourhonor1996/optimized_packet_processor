@@ -22,6 +22,6 @@ func generateString(length int) string {
 	return v
 }
 
-func generateId(start int, stop int) uint32 {
-	return uint32(start + rand.Intn(stop-start-1))
+func generateId(start int, stop int) int {
+	return start + rand.Intn(stop-start-1)
 }
