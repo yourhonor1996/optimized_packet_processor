@@ -1,7 +1,6 @@
 package processor
 
 import (
-	"bufio"
 	"fmt"
 	"github.com/yourhonor1996/optimized_packet_processor/packet_proecssor/utils"
 	"os"
@@ -60,9 +59,11 @@ func CountAndWriteToFileInOneBatch(inputFile, outputFile string, nSamples int) {
 	fmt.Println("- - - - - - - - - - - - - - - - - - - -")
 	fmt.Println("<Write All>")
 	t.Start()
-	writer := bufio.NewWriter(output)
 	for _, result := range resultsStrings {
-		writer.WriteString(result + "\n")
+		_, e := output.WriteString(result + "\n")
+		if e != nil {
+			fmt.Println("Error writing to file")
+		}
 	}
 	fmt.Printf("Time it took to Write All: <%d> Milliseconds.\n", t.DiffMilli())
 }
